@@ -12,19 +12,9 @@ $content-border-color: #bbb;
 
   .menu-section {
     border: 1px solid $menu-border-color;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 37%;
   }
 
   .content-section {
     border: 1px solid $content-border-color;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 62%;
   }
 }
