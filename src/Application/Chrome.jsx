@@ -1,12 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import { Link } from 'react-router';
 
 const cssClasses = {
   comp: 'application',
   menu: 'menu-section',
-  content: 'content-section',
+  activeLink: 'active-link',
 };
 
 const Chrome = React.createClass({
@@ -15,31 +14,27 @@ const Chrome = React.createClass({
   },
 
   renderMenuSection() {
-    const menuClassNames = classNames({
-      [cssClasses.menu]: true,
-      'col-md-3': true,
-    });
     return (
-      <div className={menuClassNames}>
+      <div className={cssClasses.menu + ' col-md-3'}>
         <ul>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/about">
-            <li>About Me</li>
-          </Link>
+          <li>
+            <Link to="" activeClassName={cssClasses.activeLink} onlyActiveOnIndex>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="about" activeClassName={cssClasses.activeLink}>
+              About Me
+            </Link>
+          </li>
         </ul>
       </div>
     );
   },
 
   renderContentSection() {
-    const contentClassNames = classNames({
-      [cssClasses.content]: true,
-      'col-md-9': true,
-    });
     return (
-      <div className={contentClassNames}>
+      <div className="col-md-9">
         {this.props.children}
       </div>
     );
