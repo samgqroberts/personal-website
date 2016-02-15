@@ -4,6 +4,7 @@ import { browserHistory, Router } from 'react-router';
 
 import HomePage from './HomePage';
 import AboutMePage from './AboutMePage';
+import SylverStudiosPage from './SylverStudiosPage';
 import NotFoundPage from './NotFoundPage';
 
 const contentRoutes = {
@@ -11,6 +12,7 @@ const contentRoutes = {
   indexRoute: { component: HomePage },
   childRoutes: [
     { path: 'about', component: AboutMePage },
+    { path: 'sylverstudios', component: SylverStudiosPage },
     { path: '*', component: NotFoundPage },
   ],
 };

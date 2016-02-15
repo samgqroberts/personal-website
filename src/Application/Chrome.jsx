@@ -27,6 +27,11 @@ const Chrome = React.createClass({
               About Me
             </Link>
           </li>
+          <li>
+            <Link to="sylverstudios" activeClassName={cssClasses.activeLink}>
+              Sylver Studios
+            </Link>
+          </li>
         </ul>
       </div>
     );
