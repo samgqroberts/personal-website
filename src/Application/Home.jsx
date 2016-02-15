@@ -24,6 +24,9 @@ const Home = React.createClass({
         <p>
           Find me on <a href="https://play.spotify.com/user/samgqroberts">Spotify</a>.
         </p>
+        <p>
+          Find me on <a href="https://vine.co/u/1023073943265157120">Vine</a>.
+        </p>
       </div>
     );
   },
