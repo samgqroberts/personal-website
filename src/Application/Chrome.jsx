@@ -28,9 +28,6 @@ const Chrome = React.createClass({
           <Link to="/about">
             <li>About Me</li>
           </Link>
-          <Link to="/xalcn22k22">
-            <li>Nonsense url (not found page)</li>
-          </Link>
         </ul>
       </div>
     );
