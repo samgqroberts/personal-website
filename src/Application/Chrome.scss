@@ -1,7 +1,15 @@
 .menu-section {
   padding-top: 37px;
+
+  ul {
+    list-style-type: none;
+  }
 }
 
 .active-link {
   font-weight: bold;
+}
+
+.content-section {
+  margin-top: 10px;
 }

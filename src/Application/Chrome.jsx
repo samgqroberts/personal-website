@@ -6,6 +6,7 @@ const cssClasses = {
   comp: 'application',
   menu: 'menu-section',
   activeLink: 'active-link',
+  content: 'content-section',
 };
 
 const Chrome = React.createClass({
@@ -39,7 +40,7 @@ const Chrome = React.createClass({
 
   renderContentSection() {
     return (
-      <div className="col-md-9">
+      <div className={cssClasses.content + ' col-md-8'}>
         {this.props.children}
       </div>
     );
