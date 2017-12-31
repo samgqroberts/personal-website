@@ -9,6 +9,14 @@ const cssClasses = {
   content: 'content-section',
 };
 
+const MenuLink = ({ to, isIndex, children }) => (
+  <li>
+    <Link {...{ to }} activeClassName={cssClasses.activeLink} onlyActiveOnIndex={isIndex}>
+      {children}
+    </Link>
+  </li>
+);
+
 const Chrome = React.createClass({
   propTypes: {
     children: React.PropTypes.node.isRequired,
@@ -18,21 +26,10 @@ const Chrome = React.createClass({
     return (
       <div className={cssClasses.menu + ' col-md-3'}>
         <ul>
-          <li>
-            <Link to="" activeClassName={cssClasses.activeLink} onlyActiveOnIndex>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="about" activeClassName={cssClasses.activeLink}>
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link to="sylverstudios" activeClassName={cssClasses.activeLink}>
-              Sylver Studios
-            </Link>
-          </li>
+          <MenuLink to="" isIndex>Home</MenuLink>
+          <MenuLink to="projects">Projects</MenuLink>
+          <MenuLink to="about">About Me</MenuLink>
+          <MenuLink to="sylverstudios">Sylver Studios</MenuLink>
         </ul>
       </div>
     );
